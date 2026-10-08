@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel 学习助手</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="brand">Excel 学习助手</div>
+        <div class="stage-tabs" id="stageTabs"></div>
+        <div class="topbar-actions">
+            <div class="progress-mini">
+                <div class="progress-bar"><span id="topProgress"></span></div>
+                <span id="topProgressText">0/0 · 0%</span>
+            </div>
+            <button id="btnExport" class="btn">导出</button>
+            <button id="btnImport" class="btn">导入</button>
+            <input type="file" id="fileImport" hidden accept=".json">
+            <button id="btnTheme" class="btn">🌙</button>
+        </div>
+    </header>
+
+    <main class="layout">
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索知识点...">
+            </div>
+            <nav id="topicTree"></nav>
+        </aside>
+
+        <section class="content" id="content">
+            <div class="empty-state">
+                <h2>👋 欢迎</h2>
+                <p>从左侧选择一个知识点开始学习</p>
+            </div>
+        </section>
+
+        <aside class="ai-panel">
+            <div class="ai-header">
+                <h3>AI 提示词工作台</h3>
+            </div>
+            <div class="ai-body" id="aiPanel">
+                <p class="hint">选择知识点后，此处会显示可用提示词模板。</p>
+            </div>
+        </aside>
+    </main>
+
+    <div class="lightbox" id="lightbox" hidden>
+        <img id="lightboxImg" alt="">
+    </div>
+
+    <script src="data.js"></script>
+    <script src="prompts.js"></script>
+    <script src="storage.js"></script>
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

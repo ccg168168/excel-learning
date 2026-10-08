@@ -1,2 +1,20 @@
-# excel-learning
-Excel 学习助手
+# PS 学习助手
+
+单人本地 PS 学习管理网页。
+
+## 运行
+1. VSCode 打开项目
+2. 右键 index.html → Open with Live Server
+3. 或者直接双击 index.html（功能稍有受限）
+
+## 功能
+- 阶段/模块/知识点导航
+- 任务勾选、自检勾选
+- 掌握度管理、笔记
+- AI 提示词一键复制
+- 本地存储、导入导出 JSON
+- 暗色模式
+
+## 备份
+点「导出」下载 JSON，下次「导入」即可恢复。
+
